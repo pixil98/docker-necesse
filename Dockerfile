@@ -7,7 +7,7 @@ RUN mkdir /config
 COPY .build/server/${FOLDER_NAME} /necesse
 COPY start-necesse.sh .
 
-ENV WORLD_NAME="myworld.zip"
+ENV WORLD_NAME="myworld"
 
 CMD ["./start-necesse.sh"]
 
