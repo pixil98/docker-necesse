@@ -4,7 +4,7 @@ ARG FOLDER_NAME
 
 RUN mkdir /config
 
-COPY .build/server/${FOLDER_NAME} /necesse
+COPY ${FOLDER_NAME} /necesse
 COPY start-necesse.sh .
 
 ENV WORLD_NAME="myworld"

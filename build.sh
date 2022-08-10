@@ -24,4 +24,4 @@ chmod +x .build/server/${SERVER_FOLDER}/jre/bin/*
 IFS='-' read -r -a array <<< "${SERVER_FOLDER}"
 VERSION=$(echo ${array[@]:2} | tr ' ' '.')
 
-docker build -t pixil/necesse:${VERSION} -t pixil/necesse:latest --build-arg FOLDER_NAME=${SERVER_FOLDER} .
+docker build -t pixil/necesse:${VERSION} -t pixil/necesse:latest --build-arg FOLDER_NAME=".build/server/${SERVER_FOLDER}" .
